@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  projectmanagementapp:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - 8081:80
+      - 8080:443
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      #- ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  projectmanagementdb:
+     container_name: project-management-db
+     image: mcr.microsoft.com/mssql/server:2019-latest
+     ports:
+            - 8082:1433
+     environment:
+        - ACCEPT_EULA=Y
+        - MSSQL_SA_PASSWORD=1hisIsStrongPwd!!
+     networks:
+        - projectmanagement

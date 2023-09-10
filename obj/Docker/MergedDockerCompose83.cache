@@ -1,0 +1,69 @@
+name: dockercompose1602025840528341237
+services:
+  projectmanagementapp:
+    build:
+      context: E:\Software Development Project\Project Management\Project Management
+      dockerfile: Project Management/Dockerfile
+    container_name: project-management-app
+    depends_on:
+      projectmanagementdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTPS_PORT: "443"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: ducphuong198
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /https/midouz.online.pfx
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DB_HOST: sqldb
+      DB_NAME: ProjectManagement
+      DB_SA_PASSWORD: Ducphuong198
+    image: midouz/projectmanagement
+    networks:
+      projectmanagement: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "8080"
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      published: "8081"
+      protocol: tcp
+    stdin_open: true
+    tty: true
+    user: root
+    volumes:
+    - type: bind
+      source: C:\Users\dphuo\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\dphuo\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  projectmanagementdb:
+    container_name: project-management-db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: Ducphuong198
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      projectmanagement: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "8082"
+      protocol: tcp
+networks:
+  projectmanagement:
+    name: dockercompose1602025840528341237_projectmanagement

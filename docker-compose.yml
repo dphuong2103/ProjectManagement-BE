@@ -1,0 +1,42 @@
+version: '3.4'
+networks:
+    projectmanagement:
+services:
+    projectmanagementdb:
+        container_name: project-management-db
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        ports:
+            - 8082:1435
+        environment:
+            - ACCEPT_EULA=Y
+            - MSSQL_SA_PASSWORD=1hisIsStrongPwd!!
+        networks:
+            - projectmanagement
+
+    projectmanagementapp:
+        container_name: project-management-app
+        user: root
+        tty: true
+        stdin_open: true
+        build:
+          context: .
+          dockerfile: Project Management/Dockerfile
+        extra_hosts:
+          - host.docker.internal:host-gateway
+        ports:
+            - 8086:80
+            - 8085:443
+        environment:
+            ASPNETCORE_URLS: https://+;http://+
+            ASPNETCORE_HTTPS_PORT: 443
+            DB_HOST: projectmanagementdb
+            DB_NAME: ProjectManagement
+            DB_SA_PASSWORD: 1hisIsStrongPwd!!
+            ASPNETCORE_Kestrel__Certificates__Default__Password: "ducphuong198"
+            ASPNETCORE_Kestrel__Certificates__Default__Path: /https/midouz.online.pfx
+        depends_on:
+            - projectmanagementdb
+        networks:
+            - projectmanagement
+        image: midouz/projectmanagement
+ 

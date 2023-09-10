@@ -1,0 +1,31 @@
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Project Management.deps.json
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Project Management.runtimeconfig.json
+E:\Software Development Project\Project Management\Project Management\bin\Debug\appsettings.Development.json
+E:\Software Development Project\Project Management\Project Management\bin\Debug\appsettings.json
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Credentials\project-management-a129e-firebase-adminsdk-tc07n-588af4f467.json
+E:\Software Development Project\Project Management\Project Management\bin\Debug\FirebaseSDK\project-management-a129e-firebase-adminsdk-tc07n-f7473fc8e1.json
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Project Management.exe
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Project Management.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.EntityFrameworkCore.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\FirebaseAdmin.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Google.Apis.Auth.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Google.Apis.Core.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Google.Apis.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Google.Api.Gax.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Google.Api.Gax.Rest.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.OpenApi.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.Data.SqlClient.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Microsoft.Identity.Client.dll
+E:\Software Development Project\Project Management\Project Management\bin\Debug\Project Management.pdb
+E:\Software Development Project\Project Management\Project Management\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+E:\Software Development Project\Project Management\Project Management\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+E:\Software Development Project\Project Management\Project Management\obj\Debug\docker-compose.dcproj.CopyComplete
